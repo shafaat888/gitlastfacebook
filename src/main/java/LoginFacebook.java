@@ -1,5 +1,4 @@
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -23,6 +22,8 @@ public void loginfacebook() throws InterruptedException
 {
 	driver.findElement(By.xpath("//*[@id='email']")).sendKeys("shafiforu65@gmail.com");
 	Thread.sleep(3000);	
+	driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("shafi_FORu65");
+	driver.findElement(By.xpath("//*[@id='loginbutton']")).click();
 }
 @AfterTest
 public void teardown()
